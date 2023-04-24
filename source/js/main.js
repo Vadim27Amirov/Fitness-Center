@@ -5,15 +5,38 @@ import {Form} from './modules/form-validate/form';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
+  iosVhFix();
+  const aboutBlock = document.querySelector('.about');
+  const textShow = aboutBlock.getElementsByTagName('aside');
+  const slideActive = document.querySelectorAll('.swiper-slide-visible');
+  const videoPlay = document.querySelector('.video');
+  const videoLink = document.querySelector('.video__link');
   // Utils
   // ---------------------------------
-
-  iosVhFix();
+  videoPlay.addEventListener('click', () => {
+    videoLink.removeAttribute('href');
+    videoPlay.innerHTML = '<iframe class="video__content" allowfullscreen="" allow="autoplay" src="https://www.youtube.com/embed/9TZXsZItgdw?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" frameborder="0"></iframe>';
+  });
 
   // Modules
   // ---------------------------------
+  const getTabIndex = (slide) => {
+    slide.forEach((el) => {
+      el.setAttribute('tabindex', 0);
+    });
+  };
 
+  const breakpoint = window.matchMedia('(min-width:1200px)');
+  const breakpointChecker = () => {
+    if (breakpoint.matches) {
+      getTabIndex(slideActive);
+      textShow[0].style.display = 'block';
+    } else {
+      textShow[0].style.display = 'none';
+    }
+  };
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
