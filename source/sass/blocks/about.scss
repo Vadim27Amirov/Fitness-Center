@@ -1,0 +1,133 @@
+.about {
+  position: relative;
+  margin-bottom: 235px;
+
+  @include vp-1199 {
+    margin-bottom: 180px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 75px;
+  }
+
+  & article {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 38px;
+    color: $sapphire;
+
+    @include vp-1199 {
+      margin-bottom: 33px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+      padding: 0 15px;
+    }
+  }
+
+  & aside {
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-1199 {
+      padding: 0 54px;
+    }
+
+    @include vp-767 {
+      padding: 0 42px 0 15px;
+    }
+  }
+
+  & .about__container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 80px;
+    padding-left: 120px;
+    justify-content: end;
+
+    @include vp-1199 {
+      grid-template-columns: 1fr;
+      gap: 44px;
+      text-align: center;
+      padding-left: 45px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      text-align: left;
+      gap: 33px;
+      aspect-ratio: 320/312;
+    }
+  }
+}
+
+.about h2 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  font-family: $ff-alumnisans;
+  letter-spacing: 0.03em;
+  margin: 37px 0 10px;
+  color: $sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0;
+    padding-right: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 0 15px;
+  }
+}
+
+.about p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: $sapphire;
+
+  @include vp-1199 {
+    padding: 0 54px;
+  }
+
+  @include vp-767 {
+    padding: 0 42px 0 15px;
+  }
+}
+
+.about__img {
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 60.8%;
+    background-color: $light-gray;
+
+    @include vp-1199 {
+      padding-top: 50.8%;
+    }
+
+    @include vp-767 {
+      padding-top: 98%;
+    }
+  }
+
+  & img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  width: 100%;
+  position: relative;
+}
