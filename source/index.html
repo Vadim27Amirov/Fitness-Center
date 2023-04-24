@@ -59,52 +59,69 @@
             </div>
           </section>
         </header>
-    <main>
-      <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section>
+      <main>
+        <h1 class="visually-hidden">Фитнес зал Supergym</h1>
+        <section class="about">
+          <div class="about__container container">
+            <div>
+              <h2>Тренажерный зал</h2>
+              <article>Просторный зал площадью 900 кв/м</article>
+              <p>
+                Supergym – самый большой фитнес центр за Уралом и&nbsp;идеальное место для укрепления тела и здоровья.
+                Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+              </p>
+              <aside>
+                В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+                несколько оборудованных залов для различных видов групповых занятий.
+              </aside>
+            </div>
+            <div class="about__img">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gym-mobile.webp 1x, img/gym-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/gym-tablet.webp 1x, img/gym-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gym.webp 1x, img/gym@2x.webp 2x">
+                <img src="img/gym.jpg" width="660" height="401" alt="Тренажерный зал"
+                  srcset="img/gym@2x.jpg">
+              </picture>
+            </div>
+            <div class="about__video video">
+              <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" tabindex="-1">
+                <picture>
+                  <source type="image/webp" srcset="img/video.webp 1x, img/video@2x.webp 2x">
+                  <img class="video__content" src="img/video.png" width="364" height="258"
+                    srcset="img/video@2x.jpg 2x" alt="Видео">
+                </picture>
+              </a>
+              <button class="video__btn" aria-label="Запустить видео">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear_7653_167)" stroke-opacity="0.2"
+                    stroke-width="2" />
+                  <circle cx="50" cy="50" r="36" fill="url(#paint1_linear_7653_167)" />
+                  <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white" />
+                  <defs>
+                    <linearGradient id="paint0_linear_7653_167" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="1" stop-color="#ED0233" />
+                      <stop offset="1" stop-color="#003EB7" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_7653_167" x1="14" y1="49.52" x2="54.1858" y2="9.18415"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#003D85" />
+                      <stop offset="0.885417" stop-color="#B80027" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
     </main>
     <footer>
       <div class="container"></div>
     </footer>
   </div>
-
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
