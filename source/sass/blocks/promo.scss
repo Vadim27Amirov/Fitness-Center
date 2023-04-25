@@ -1,174 +1,171 @@
 .promo {
-  width: 100%;
-  padding: 0 0 49px 0;
-  color: $color-default-white;
-  margin: -52px 0 0 0;
-
-  @include vp-1199 {
-    margin-top: 17px;
-    padding: 0 0 82px 0;
-  }
-
-  & .container {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    padding-right: 259px;
+  & .promo__container {
+    display: flex;
+    color: $color-default-white;
+    align-items: stretch;
+    margin-bottom: 105px;
 
     @include vp-1199 {
-      padding-right: 45px;
-      gap: 30px;
+      margin-bottom: 99px;
     }
 
     @include vp-767 {
-      padding-right: 15px;
-      grid-template-columns: 292px;
-      justify-content: center;
+      margin-bottom: 62px;
+      flex-direction: column;
+    }
+  }
+}
+
+.promo__wrapper {
+  padding: 85px 75px;
+  background-color: $torch-red;
+
+  @include vp-1199 {
+    padding: 47px 36px 53px 43px;
+    min-width: 292px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+  }
+}
+
+.promo__box-title {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    gap: 27px;
+    margin-bottom: 0;
+  }
+}
+
+.promo__day {
+  margin-right: 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+
+    @include vp-1199 {
+      margin-top: -3px;
+      margin-bottom: -6px;
     }
   }
 
-  @include vp-767 {
-    margin-top: 34px;
-    padding: 0 0 79px 0;
-  }
-}
+  span {
+    padding-bottom: 3px;
+    width: 64px;
+    font-size: 18px;
+    line-height: 27px;
+    position: relative;
 
-.promo__text-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-right: 61px;
-  margin-top: 113px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 176%;
+      display: inline-block;
+      height: 1px;
+      background-color: $color-default-white;
+    }
 
-  @include vp-1199 {
-    margin-top: 49px;
-    max-width: 324px;
-    margin-right: 0;
-  }
-
-  @include vp-767 {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 24px;
-    max-width: 100%;
-  }
-}
-
-.promo__box {
-  margin-top: 48px;
-
-  @include vp-1199 {
-    margin-right: 6px;
-    margin-top: 24px;
-  }
-}
-
-.promo__list {
-  padding: 0 0 0 19px;
-  margin: 136px 0 0;
-  list-style-type: none;
-
-  @include vp-1199 {
-    margin-top: 97px;
-    padding: 0;
+    @include vp-1199 {
+      font-size: 12px;
+      line-height: 14px;
+      padding-top: 0;
+    }
   }
 
-  @include vp-767 {
-    margin-top: 85px;
-  }
-}
+  time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: -3px;
+    margin-top: 3px;
 
-.promo__description {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: right;
-
-  @include vp-1199 {
-    min-width: 113px;
-  }
-}
-
-.promo__title {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 0.03em;
-  font-family: $ff-alumnisans;
-  padding-right: 52px;
-  text-align: right;
-
-  @include vp-1199 {
-    font-size: 34px;
-    line-height: 41px;
-    padding-right: 4px;
+    @include vp-1199 {
+      font-size: 10px;
+      line-height: 14px;
+      margin-left: 0;
+      margin-top: 0;
+    }
   }
 
-  @include vp-767 {
-    width: auto;
-    font-size: 28px;
-    line-height: 34px;
-    margin: 3px 3px 5px;
-    text-align: end;
-    padding: 0;
-  }
-}
+  b {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
 
-.promo__text-content {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: max-content min-content;
-
-  @include vp-1199 {
-    gap: 20px;
-  }
-
-  @include vp-767 {
-    gap: 0;
-    justify-content: space-between;
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 34px;
+      padding-right: 5px;
+    }
   }
 }
 
 .promo__heading {
   font-family: $ff-alumnisans;
-  font-weight: 700;
-  font-size: 92px;
-  line-height: 110px;
-  text-align: right;
-  letter-spacing: 0.05em;
-  max-width: 266px;
-  margin: 13px 0 50px;
-  padding: 0;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  width: 205px;
   text-transform: uppercase;
+  margin: 0;
+  color: $color-default-white;
 
   @include vp-1199 {
-    font-size: 74px;
-    line-height: 86px;
-    text-transform: none;
-    letter-spacing: 0.03em;
-    margin: 7px 0 37px;
-  }
-
-  @include vp-767 {
-    padding: 0;
-    width: auto;
-    margin-left: -15px;
-    margin-bottom: 25px;
+    font-size: 48px;
+    line-height: 46px;
+    width: 120px;
+    padding-top: 3px;
   }
 }
 
-.promo__button {
+.promo__description {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 45px;
+  max-width: 347px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 1px;
+    padding-left: 2px;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 29px;
+  }
+}
+
+.promo__link {
   font-weight: 700;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
   line-height: 14px;
-  color: $color-default-white;
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border: 4px solid $color-default-white;
-  min-height: 57px;
-  display: flex;
-  justify-content: center;
-  width: 230px;
-  margin: 0 0 0 auto;
+  width: 347px;
+  min-height: 71px;
   text-align: center;
+  color: $color-default-white;
+  border: 4px solid $color-default-white;
+  cursor: pointer;
+  opacity: 1;
 
   &:hover,
   &:focus {
@@ -176,50 +173,26 @@
   }
 
   @include vp-1199 {
-    padding: 19px 19px;
-    width: 187px;
+    font-size: 10px;
+    line-height: 12px;
+    width: 96%;
+    min-height: 39px;
+    border: 2px solid $color-default-white;
+    margin-top: auto;
   }
 
-  @include vp-767 {
-    width: 100%;
+  &:hover,
+  &:active {
+    transition: opacity $trans-default;
   }
 }
 
 .promo__img {
-  position: relative;
-  background-color: $persian-blue;
-  flex: 1 0 500px;
-  height: auto;
+  width: 100%;
+  background-color: $egyptian-blue;
 
-  @include vp-1199 {
-    max-width: 500px;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-
-  &::before {
-    display: block;
-    padding-top: 111.2%;
-    content: "";
-
-
-    @include vp-1199 {
-      padding-top: 120.8%;
-    }
-
-    @include vp-767 {
-      padding-top: 98%;
-    }
-  }
-
-  img {
-    position: absolute;
-    left: 0;
-    top: 0;
+  & img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
   }
 }

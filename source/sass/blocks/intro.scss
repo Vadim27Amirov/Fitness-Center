@@ -1,0 +1,225 @@
+.intro {
+  width: 100%;
+  padding: 0 0 49px 0;
+  color: $color-default-white;
+  margin: -52px 0 0 0;
+
+  @include vp-1199 {
+    margin-top: 17px;
+    padding: 0 0 82px 0;
+  }
+
+  & .intro__container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    padding-right: 259px;
+
+    @include vp-1199 {
+      padding-right: 45px;
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      padding-right: 15px;
+      grid-template-columns: 292px;
+      justify-content: center;
+    }
+  }
+
+  @include vp-767 {
+    margin-top: 34px;
+    padding: 0 0 79px 0;
+  }
+}
+
+.intro__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 61px;
+  margin-top: 113px;
+
+  @include vp-1199 {
+    margin-top: 49px;
+    max-width: 324px;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 24px;
+    max-width: 100%;
+  }
+}
+
+.intro__box {
+  margin-top: 48px;
+
+  @include vp-1199 {
+    margin-right: 6px;
+    margin-top: 24px;
+  }
+}
+
+.intro__list {
+  padding: 0 0 0 19px;
+  margin: 136px 0 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    margin-top: 97px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 85px;
+  }
+}
+
+.intro__description {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+
+  @include vp-1199 {
+    min-width: 113px;
+  }
+}
+
+.intro__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  font-family: $ff-alumnisans;
+  padding-right: 52px;
+  text-align: right;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 41px;
+    padding-right: 4px;
+  }
+
+  @include vp-767 {
+    width: auto;
+    font-size: 28px;
+    line-height: 34px;
+    margin: 3px 3px 5px;
+    text-align: end;
+    padding: 0;
+  }
+}
+
+.intro__text-content {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: max-content min-content;
+
+  @include vp-1199 {
+    gap: 20px;
+  }
+
+  @include vp-767 {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.intro__heading {
+  font-family: $ff-alumnisans;
+  font-weight: 700;
+  font-size: 92px;
+  line-height: 110px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  max-width: 266px;
+  margin: 13px 0 50px;
+  padding: 0;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    font-size: 74px;
+    line-height: 86px;
+    text-transform: none;
+    letter-spacing: 0.03em;
+    margin: 7px 0 37px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    width: auto;
+    margin-left: -15px;
+    margin-bottom: 25px;
+  }
+}
+
+.intro__button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-default-white;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 4px solid $color-default-white;
+  min-height: 57px;
+  display: flex;
+  justify-content: center;
+  width: 230px;
+  margin: 0 0 0 auto;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @include vp-1199 {
+    padding: 19px 19px;
+    width: 187px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.intro__img {
+  position: relative;
+  background-color: $persian-blue;
+  flex: 1 0 500px;
+  height: auto;
+
+  @include vp-1199 {
+    max-width: 500px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &::before {
+    display: block;
+    padding-top: 111.2%;
+    content: "";
+
+
+    @include vp-1199 {
+      padding-top: 120.8%;
+    }
+
+    @include vp-767 {
+      padding-top: 98%;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
