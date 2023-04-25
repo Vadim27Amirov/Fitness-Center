@@ -1,11 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-
+import {switchProduct} from './modules/product';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  iosVhFix();
   const aboutBlock = document.querySelector('.about');
   const textShow = aboutBlock.getElementsByTagName('aside');
   const slideActive = document.querySelectorAll('.swiper-slide-visible');
@@ -17,6 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
     videoLink.removeAttribute('href');
     videoPlay.innerHTML = '<iframe class="video__content" allowfullscreen="" allow="autoplay" src="https://www.youtube.com/embed/9TZXsZItgdw?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" frameborder="0"></iframe>';
   });
+
+  iosVhFix();
 
   // Modules
   // ---------------------------------
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    switchProduct();
   });
 });
 
