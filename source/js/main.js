@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
 import {switchProduct} from './modules/product';
+import {addCoachSwiper} from './modules/add-swiper';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,10 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
     videoPlay.innerHTML = '<iframe class="video__content" allowfullscreen="" allow="autoplay" src="https://www.youtube.com/embed/9TZXsZItgdw?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" frameborder="0"></iframe>';
   });
 
-  iosVhFix();
-
   // Modules
   // ---------------------------------
+
   const getTabIndex = (slide) => {
     slide.forEach((el) => {
       el.setAttribute('tabindex', 0);
@@ -38,13 +37,12 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   breakpoint.addListener(breakpointChecker);
   breakpointChecker();
+  iosVhFix();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    addCoachSwiper();
     initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
     switchProduct();
   });
 });
