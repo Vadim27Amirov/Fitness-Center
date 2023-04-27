@@ -1,5 +1,5 @@
 .promo {
-  & .promo__container {
+  .promo__container {
     display: flex;
     color: $color-default-white;
     align-items: stretch;
@@ -191,7 +191,7 @@
   width: 100%;
   background-color: $egyptian-blue;
 
-  & img {
+  img {
     height: 100%;
     width: 100%;
   }

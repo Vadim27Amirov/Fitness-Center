@@ -95,7 +95,7 @@
   top: 0;
   background-color: $spindle;
 
-  & img {
+  img {
     width: 100%;
     height: 100%;
   }
@@ -137,13 +137,13 @@
     padding-left: 29px;
   }
 
-  & li {
+  li {
     position: relative;
     padding-left: 21px;
     margin-bottom: 14px;
   }
 
-  & li::before {
+  li::before {
     position: absolute;
     left: 5px;
     top: 7px;
@@ -172,13 +172,13 @@
   padding: 0;
   background-color: transparent;
 
-  &:hover svg,
-  &:focus svg {
-    filter: drop-shadow(0 0 2px $torch-red);
+  :hover svg,
+  :focus svg {
+    filter: drop-shadow(0 0 2px $persian-blue);
     transition: filter $trans-default;
   }
 
-  & svg {
+  svg {
     @include vp-767 {
       width: 10px;
       height: 19px;
