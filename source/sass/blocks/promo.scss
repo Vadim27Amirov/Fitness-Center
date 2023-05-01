@@ -17,7 +17,7 @@
 }
 
 .promo__wrapper {
-  padding: 85px 75px;
+  padding: 85px 76px;
   background-color: $torch-red;
 
   @include vp-1199 {
@@ -101,6 +101,7 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 47px;
+    /* margin-right: 7px; */
 
     @include vp-1199 {
       font-size: 24px;
@@ -142,7 +143,7 @@
     line-height: 18px;
     padding-top: 1px;
     padding-left: 2px;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   @include vp-767 {

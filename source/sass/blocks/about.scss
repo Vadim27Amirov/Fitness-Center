@@ -13,6 +13,7 @@
   h3 {
     font-size: 18px;
     line-height: 27px;
+    margin: 0;
     margin-bottom: 38px;
     color: $sapphire;
     font-weight: 400;
@@ -32,6 +33,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
+    margin: 0;
 
     @include vp-1199 {
       padding: 0 54px;
@@ -71,7 +73,7 @@
   font-weight: 600;
   font-family: $ff-alumnisans;
   letter-spacing: 0.03em;
-  margin: 37px 0 10px;
+  margin: 40px 0 7px;
   color: $sapphire;
 
   @include vp-1199 {
@@ -95,9 +97,12 @@
   font-size: 16px;
   line-height: 24px;
   color: $sapphire;
+  margin: 0;
+  margin-bottom: 7px;
 
   @include vp-1199 {
     padding: 0 54px;
+    margin: 0;
   }
 
   @include vp-767 {

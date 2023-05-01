@@ -1,0 +1,214 @@
+.stocks {
+  margin-bottom: 118px;
+
+  @include vp-1199 {
+    margin-bottom: 93px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 66px;
+  }
+}
+
+.stocks__promo {
+  color: $color-default-white;
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.stocks__heading {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-family: $ff-alumnisans;
+  margin-bottom: 32px;
+  color: $sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 37px;
+    padding-right: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    padding-right: 7px;
+    margin-bottom: 41px;
+  }
+}
+
+.stocks__left {
+  min-width: 280px;
+  background-color: $torch-red;
+  padding: 36px 45px 45px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    min-width: 280px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    align-items: center;
+    min-height: 299px;
+  }
+
+  b {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 109px;
+    display: block;
+    margin-top: -29px;
+  }
+}
+
+.stocks__img {
+  min-height: 462px;
+  min-width: 280px;
+  width: 100%;
+  background-color: $cobalt;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+
+  @media (min-width: 1200px) {
+    background-image: url("../img/promo.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo@2x.webp");
+    }
+  }
+
+  @include vp-1199 {
+    min-width: 399px;
+    background-image: url("../img/promo-tablet.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-tablet@2x.webp");
+    }
+  }
+
+  @include vp-767 {
+    min-width: auto;
+    padding-top: 103%;
+    min-height: 299px;
+    background-position-y: 16%;
+  }
+}
+
+.stocks__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0;
+}
+
+.stocks__description {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  margin: 0;
+
+  @include vp-1199 {
+    margin-top: 3px;
+  }
+
+  @include vp-767 {
+    margin-top: -2px;
+  }
+}
+
+.stocks__btn {
+  font-weight: 700;
+  color: $resolution-blue;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $resolution-blue;
+  margin-top: auto;
+  width: fit-content;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &--left {
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+    border-color: $color-default-white;
+  }
+}
+
+.stocks__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.stocks__box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: $resolution-blue;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stocks__card {
+  border: 7px solid transparent;
+  border-image-source: linear-gradient(148.82deg, $crimson 0.85%, $smalt 100%);
+  border-image-width: 7px;
+  border-image-slice: 3;
+  padding: 10px 28px 28px;
+  min-height: 211px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-767 {
+    padding: 38px 20px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.stocks dl {
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.stocks__card-title {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.stocks__card-description {
+  margin: 0 0 10px 0;
+}

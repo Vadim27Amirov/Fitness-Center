@@ -85,6 +85,11 @@
     display: block;
   }
 
+  &:hover .coach__img,
+  &:focus .coach__img {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
 }
 
 .coach__img {

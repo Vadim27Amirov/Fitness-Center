@@ -1,0 +1,152 @@
+.feedback {
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 69px;
+  }
+}
+
+
+.feedback__heading {
+  font-family: $ff-alumnisans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 37px;
+  padding-left: 6px;
+  color: $sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    padding-right: 10px;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.feedback__wrapper {
+  position: relative;
+  max-width: 562px;
+  margin: 0 auto;
+
+  @include vp-767 {
+    padding: 0 33px;
+  }
+}
+
+.feedback__slide {
+  color: $color-default-white;
+  background-color: $resolution-blue;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  height: auto;
+  padding: 54px 62px 58px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 28px;
+
+  @include vp-767 {
+    padding: 40px 25px 36px;
+    display: block;
+  }
+
+  img {
+    @include vp-767 {
+      width: 68px;
+      height: 68px;
+      position: absolute;
+      left: 39px;
+    }
+  }
+}
+
+.feedback h3 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    text-align: left;
+    padding-left: 98px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback p {
+  margin: 0;
+  line-height: 22px;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.feedback__button {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+  border: 0;
+  width: 30px;
+  height: 34px;
+  padding: 0;
+  background-color: transparent;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    filter: drop-shadow(0 0 2px $persian-blue);
+    transition: filter $trans-default;
+  }
+
+  svg {
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+}
+
+.feedback__button--prev {
+  left: -11%;
+  top: 100px;
+
+  @include vp-1199 {
+    left: -12%;
+  }
+
+  @include vp-767 {
+    left: -3%;
+    top: 45%;
+  }
+}
+
+.feedback__button--next {
+  right: -11%;
+  top: 100px;
+
+  @include vp-1199 {
+    right: -12%;
+  }
+
+  @include vp-767 {
+    right: -3%;
+    top: 45%;
+  }
+}
