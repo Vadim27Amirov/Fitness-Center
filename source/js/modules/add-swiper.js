@@ -1,6 +1,32 @@
 import Swiper from '../vendor/swiper-bundle.min';
 
 const coachSwiper = document.querySelector('.coach-swiper');
+const feedbackSwiper = document.querySelector('.feedback__swiper');
+
+const addFeedbackSwiper = () => {
+  if (!feedbackSwiper) {
+    return;
+  }
+  const swiper = new Swiper(feedbackSwiper, {
+
+    navigation: {
+      nextEl: '.feedback__button--next',
+      prevEl: '.feedback__button--prev',
+    },
+
+    slidesPerView: 1,
+    watchOverflow: true,
+    loop: false,
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+
+    watchSlidesProgress: true,
+  });
+  swiper.enable();
+};
 
 const addCoachSwiper = () => {
   if (!coachSwiper) {
@@ -44,4 +70,4 @@ const addCoachSwiper = () => {
   swiper.enable();
 };
 
-export {addCoachSwiper};
+export {addCoachSwiper, addFeedbackSwiper};
