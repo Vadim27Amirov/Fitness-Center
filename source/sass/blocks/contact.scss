@@ -1,0 +1,125 @@
+.contact {
+  padding: 56px 0 58px 120px;
+  border-top: 1px solid $light-gray;
+
+  @include vp-1199 {
+    padding: 61px 0 57px 133px;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 57px;
+  }
+}
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 170px max-content;
+  row-gap: 16px;
+  column-gap: 120px;
+  position: relative;
+  padding-left: 4px;
+
+  @include vp-1199 {
+    grid-template-columns: max-content max-content;
+    column-gap: 96px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 88%;
+    width: 1px;
+    background-color: $light-gray;
+    position: absolute;
+    left: 235px;
+    top: 3px;
+
+    @include vp-1199 {
+      left: 266px;
+      top: 8px;
+      height: 87px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+  max-width: 170px;
+  list-style-type: none;
+
+  @include vp-1199 {
+    max-width: 218px;
+  }
+}
+
+.contact__heading {
+  font-family: $ff-alumnisans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  margin: 0;
+  margin-bottom: 37px;
+  letter-spacing: 0.03em;
+  color: $sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 34px;
+  }
+}
+
+.contact__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  color: $sapphire;
+
+  @include vp-1199 {
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.contact__description {
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  margin: 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  word-break: break-all;
+  color: $sapphire;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
