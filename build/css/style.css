@@ -4073,6 +4073,8 @@ button,
     height: 68px;
     position: absolute;
     left: 39px;
+    top: 38px;
+    display: block;
   }
 }
 
