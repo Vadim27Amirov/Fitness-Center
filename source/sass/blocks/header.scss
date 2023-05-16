@@ -26,20 +26,8 @@
   }
 }
 
-.header__tel-box {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 154px;
-
-  @include vp-1199 {
-    max-width: 450px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
 .header__tel {
+  display: inline-block;
   font-family: $ff-alumnisans;
   font-weight: 600;
   font-size: 26px;

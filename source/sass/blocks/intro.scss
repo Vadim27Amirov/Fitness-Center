@@ -52,42 +52,7 @@
   }
 }
 
-.intro__box {
-  margin-top: 48px;
-
-  @include vp-1199 {
-    margin-right: 6px;
-    margin-top: 24px;
-  }
-}
-
-.intro__list {
-  padding: 0 0 0 19px;
-  margin: 134px 0 0;
-  list-style-type: none;
-
-  @include vp-1199 {
-    margin-top: 95px;
-    padding: 0;
-  }
-
-  @include vp-767 {
-    margin-top: 85px;
-  }
-}
-
-.intro__description {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: right;
-  margin: 0;
-
-  @include vp-1199 {
-    min-width: 113px;
-  }
-}
-
-.intro__title {
+.intro h3 {
   font-weight: 600;
   font-size: 48px;
   line-height: 58px;
@@ -113,6 +78,32 @@
   }
 }
 
+.intro__list {
+  padding: 0 0 0 19px;
+  margin: 134px 0 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    margin-top: 95px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 85px;
+  }
+}
+
+.intro__list p {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  margin: 0;
+
+  @include vp-1199 {
+    min-width: 113px;
+  }
+}
+
 .intro__text-content {
   display: grid;
   gap: 16px;
@@ -128,7 +119,7 @@
   }
 }
 
-.intro__heading {
+.intro h1 {
   font-family: $ff-alumnisans;
   font-weight: 700;
   font-size: 92px;

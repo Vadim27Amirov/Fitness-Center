@@ -101,7 +101,6 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 47px;
-    /* margin-right: 7px; */
 
     @include vp-1199 {
       font-size: 24px;
@@ -111,7 +110,7 @@
   }
 }
 
-.promo__heading {
+.promo h2{
   font-family: $ff-alumnisans;
   font-weight: 600;
   font-size: 82px;
@@ -131,7 +130,7 @@
   }
 }
 
-.promo__description {
+.promo p{
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 45px;
@@ -151,7 +150,7 @@
   }
 }
 
-.promo__link {
+.promo a{
   font-weight: 700;
   font-size: 12px;
   display: flex;

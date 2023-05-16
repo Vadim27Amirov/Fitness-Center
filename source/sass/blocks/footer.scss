@@ -43,6 +43,7 @@
   }
 
   @include vp-767 {
-    display: none;
+    position: absolute;
+    margin: 0;
   }
 }

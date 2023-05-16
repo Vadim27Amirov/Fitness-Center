@@ -12,9 +12,9 @@
 }
 
 .user-nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 15px 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -24,67 +24,40 @@
   }
 
   @include vp-767 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 76px;
-    row-gap: 16px;
+    grid-template-columns: 130px 1fr;
+    gap: 16px 30px;
   }
 }
 
-.user-nav__item--logo {
-  display: none;
-  width: 68px;
-
-  & svg {
-    width: 100%;
-
-    @include vp-767 {
-      height: 15px;
-    }
-  }
-
+.user-nav__item--stock {
   @include vp-767 {
-    display: block;
-  }
-}
-
-.user-nav__item:nth-child(1) {
-  @include vp-767 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-left: 160px;
     order: -1;
   }
 }
 
-.user-nav__item:nth-child(2) {
+.user-nav__item--subscriptions {
   @include vp-767 {
     order: 3;
   }
 }
 
-.user-nav__item:nth-child(3) {
-  @include vp-767 {
-    order: 5;
-  }
-}
-
-.user-nav__item:nth-child(4) {
+.user-nav__item--coaches {
   @include vp-767 {
     order: 2;
   }
 }
 
-.user-nav__item:nth-child(5) {
+.user-nav__item--schedule {
   @include vp-767 {
     order: 4;
   }
 }
 
-.user-nav__item:nth-child(6) {
-  @include vp-767 {
-    order: 6;
-  }
-}
 
-.user-nav__link {
+.user-nav__list a{
   color: $color-default-white;
   line-height: 16px;
   font-size: 14px;

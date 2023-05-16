@@ -6,7 +6,7 @@
   }
 }
 
-.coach__heading {
+.coach h2 {
   font-family: $ff-alumnisans;
   font-weight: 600;
   font-size: 54px;
@@ -123,14 +123,14 @@
   display: none;
   margin: -4px 0;
   max-height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .coach__title {
   text-align: center;
   color: $spindle;
-  margin-bottom: 32px;
   margin: 0;
+  margin-bottom: 32px;
 }
 
 .coach__resume {
@@ -161,7 +161,7 @@
   }
 }
 
-.coach__resumey p {
+.coach__resume p {
   font-size: 14px;
   line-height: 21px;
 }

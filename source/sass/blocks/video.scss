@@ -1,51 +1,60 @@
-.video {
+.video__wrapper {
   position: absolute;
-  background-color: rgba(20, 54, 122, 0.5);
-  top: 265px;
+  left: 39.2%;
+  top: 288px;
   width: 364px;
   height: 228px;
-  left: 50%;
-  transform: translate(-39%, 9%);
-
-  @media (max-width: 1230px) {
-    left: 52%;
-  }
 
   @include vp-1199 {
-    width: 32%;
-    top: 70%;
-    left: 50%;
-    min-width: 266px;
-    max-height: 100%;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: -83px;
+    width: 266px;
     height: 167px;
-    padding-top: 22%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
   }
 
   @include vp-767 {
-    margin-top: 5px;
-    position: relative;
+    position: static;
     width: 100%;
-    transform: none;
-    left: 0;
-    top: 0;
-    padding-top: 51.2%;
-    height: 100%;
+    height: auto;
+    padding-top: 40px;
   }
 }
 
-.video__link {
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(20, 54, 122, 0.5);
-    z-index: 1;
-    position: absolute;
-    top: 0;
+.video iframe {
+  @include vp-767 {
+    height: auto;
+    aspect-ratio: 19.16/10;
   }
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 228px;
+
+  @include vp-1199 {
+    height: 167px;
+  }
+
+  @include vp-767 {
+    height: 0;
+    padding-bottom: 52.25%;
+    background-color: #798baf;
+  }
+}
+
+.video:hover .video__btn {
+  opacity: 0.8;
+}
+
+.video__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .video__content {
@@ -57,39 +66,34 @@
   border: none;
 }
 
-.video__btn {
+.video__btn  {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 5;
+  display: none;
   padding: 0;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   border: none;
   background-color: transparent;
+  background-image: url("../img/svg/icon-play.svg");
   transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: 2;
-
-
-  &:hover svg,
-  &:focus svg {
-    transform: scale(1.2);
-  }
-
-  svg {
-    width: 100px;
-    height: 100px;
-    transition: all 300ms;
-
-    @include vp-1199 {
-      width: 73px;
-      height: 73px;
-    }
-  }
 
   @include vp-1199 {
     width: 73px;
     height: 73px;
+    background-size: 73px;
   }
+}
+
+
+.video__enabled {
+  cursor: pointer;
+}
+
+.video__enabled .video__btn  {
+  display: block;
+  border: none;
 }
