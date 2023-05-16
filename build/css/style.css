@@ -2870,12 +2870,6 @@ button,
   border-image-slice: 3;
   outline: none;
 }
-.product__item:hover .product__link {
-  color: #ffffff;
-  border: none;
-  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #0041ca 95.31%);
-  background: linear-gradient(97.05deg, #ed0233 17.6%, #0041ca 95.31%);
-}
 
 .product__btn {
   position: relative;
