@@ -25,28 +25,26 @@
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <div class="header__tel-box">
-            <a class="header__tel" href="tel:#88005555555">8-800-555-55-55</a>
-          </div>
+          <a class="header__tel" href="tel:#88005555555">8-800-555-55-55</a>
         </div>
       </div>
       <section class="intro">
         <div class="intro__container container">
           <div class="intro__text-wrapper">
-            <p class="intro__title">Омск</p>
+            <h3>Омск</h3>
             <div class="intro__text-content">
               <ul class="intro__list">
                 <li class="intro__item">
-                  <p class="intro__description">Тренажерный зал</p>
+                  <p>Тренажерный зал</p>
                 </li>
                 <li class="intro__item">
-                  <p class="intro__description">Групповые занятия</p>
+                  <p>Групповые занятия</p>
                 </li>
                 <li class="intro__item">
-                  <p class="intro__description">Кардио зона</p>
+                  <p>Кардио зона</p>
                 </li>
               </ul>
-              <h2 class="intro__heading">Фитнес центр</h2>
+              <h1>Фитнес центр</h1>
             </div>
             <a class="intro__button" href="#product">купить абонемент</a>
           </div>
@@ -63,17 +61,13 @@
       <h1 class="visually-hidden">Фитнес центр Supergym</h1>
       <section class="about">
         <div class="about__container container">
-          <div>
+          <div class="about__inner">
             <h2>Тренажерный зал</h2>
             <h3>Просторный зал площадью 900 кв/м</h3>
-            <p>
-              Supergym – самый большой фитнес центр за Уралом и&nbsp;идеальное место для укрепления тела и здоровья.
-              Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
-            </p>
-            <aside>
-              В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
-              несколько оборудованных залов для различных видов групповых занятий.
-            </aside>
+            <div class="about__text">
+              <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для&nbsp;всех спортсменов.</p>
+              <p>В&nbsp;зале расположены отдельная зона для&nbsp;Crossfit и кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий. </p>
+            </div>
           </div>
           <div class="about__img">
             <picture>
@@ -85,52 +79,35 @@
               <img src="img/gym.jpg" width="660" height="401" alt="Тренажерный зал" srcset="img/gym@2x.jpg">
             </picture>
           </div>
+          <div class="video__wrapper">
           <div class="about__video video">
-            <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" tabindex="-1">
+            <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
               <picture>
                 <source type="image/webp" srcset="img/video.webp 1x, img/video@2x.webp 2x">
-                <img class="video__content" src="img/video.png" width="364" height="258" srcset="img/video@2x.jpg 2x"
+                <img class="video__content" src=src="https://i.ytimg.com/vi/9TZXsZItgdw/maxresdefault.jpg" width="364" height="258" srcset="img/video@2x.jpg 2x"
                   alt="Видео">
               </picture>
             </a>
-            <button class="video__btn" aria-label="Запустить видео">
-              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear_7653_167)" stroke-opacity="0.2"
-                  stroke-width="2" />
-                <circle cx="50" cy="50" r="36" fill="url(#paint1_linear_7653_167)" />
-                <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white" />
-                <defs>
-                  <linearGradient id="paint0_linear_7653_167" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444"
-                    gradientUnits="userSpaceOnUse">
-                    <stop offset="1" stop-color="#ED0233" />
-                    <stop offset="1" stop-color="#003EB7" />
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_7653_167" x1="14" y1="49.52" x2="54.1858" y2="9.18415"
-                    gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#003D85" />
-                    <stop offset="0.885417" stop-color="#B80027" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </button>
+            <button class="video__btn" aria-label="Запустить видео"></button>
           </div>
+        </div>
         </div>
       </section>
       <section class="product" id="product">
-        <div class="container">
+        <div class="product__container">
           <div class="product__wrapper">
-            <h2 class="product__heading">Абонементы</h2>
+            <h2>Абонементы</h2>
             <div class="product__btn-box">
-              <button class="product__btn is-active" type="button" data-number="1">1 месяц</button>
-              <button class="product__btn" type="button" data-number="2">6 месяцев</button>
-              <button class="product__btn" type="button" data-number="3">12 месяцев</button>
+              <a class="product__btn" href="#period-1">1&nbsp;месяц</a>
+              <a class="product__btn" href="#period-2">6&nbsp;месяцев</a>
+              <a class="product__btn" href="#period-3">12&nbsp;месяцев</a>
             </div>
-            <div class="product__content">
-              <div class="product__card is-open" data-tab="1">
+            <div class="product__content product__content--nojs">
+              <div class="product__card product__card--nojs" id="period-1">
                 <ul class="product__list">
                   <li class="product__item">
-                    <h3 class="product__title">С&nbsp;тренером</h3>
-                    <span class="product__text">12&nbsp;занятий</span>
+                    <h3>С&nbsp;тренером</h3>
+                    <span>12&nbsp;занятий</span>
                     <b>5000</b>
                     <p>5000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -138,11 +115,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Дневной</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;17:00</span>
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <b>1700</b>
                     <p>1700
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -150,11 +127,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Полный день</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;22:00</span>
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <b>2700</b>
                     <p>2700
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -162,14 +139,14 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                 </ul>
               </div>
-              <div class="product__card" data-tab="2">
+              <div class="product__card product__card--nojs" id="period-2">
                 <ul class="product__list">
                   <li class="product__item">
-                    <h3 class="product__title">С&nbsp;тренером</h3>
+                    <h3>С&nbsp;тренером</h3>
                     <span>12&nbsp;занятий</span>
                     <b>18000</b>
                     <p>18000
@@ -178,11 +155,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Дневной</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;17:00</span>
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <b>10000</b>
                     <p>10000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -190,11 +167,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Полный день</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;22:00</span>
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <b>14000</b>
                     <p>14000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -202,15 +179,15 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                 </ul>
               </div>
-              <div class="product__card" data-tab="3">
+              <div class="product__card product__card--nojs" id="period-3">
                 <ul class="product__list">
                   <li class="product__item">
-                    <h3 class="product__title">С&nbsp;тренером</h3>
-                    <span class="product__text">12&nbsp;занятий</span>
+                    <h3>С&nbsp;тренером</h3>
+                    <span>12&nbsp;занятий</span>
                     <b>45000</b>
                     <p>45000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -218,11 +195,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Дневной</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;17:00</span>
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <b>22000</b>
                     <p>22000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -230,11 +207,11 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                   <li class="product__item">
-                    <h3 class="product__title">Полный день</h3>
-                    <span class="product__text">с&nbsp;8:00 до&nbsp;22:00</span>
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <b>30000</b>
                     <p>30000
                       <svg class="product__rouble" aria-hidden="true" focusable="false" width="30" height="42"
@@ -242,7 +219,7 @@
                         <use href="img/sprite.svg#icon-rouble"></use>
                       </svg>
                     </p>
-                    <a class="product__link" href="#">купить абонемент</a>
+                    <a href="#">купить абонемент</a>
                   </li>
                 </ul>
               </div>
@@ -254,7 +231,7 @@
         <div class="promo__container container">
           <div class="promo__wrapper">
             <div class="promo__box-title">
-              <h2 class="promo__heading">super games</h2>
+              <h2>super games</h2>
               <div class="promo__date">
                 <div class="promo__day">
                   <span>Дата</span>
@@ -266,8 +243,8 @@
                 </div>
               </div>
             </div>
-            <p class="promo__description">Ежегодные соревнования по CrossFit</p>
-            <a class="promo__link" href="#">заполнить заявку</a>
+            <p>Ежегодные соревнования по CrossFit</p>
+            <a href="#">заполнить заявку</a>
           </div>
           <div class="promo__img">
             <picture>
@@ -281,7 +258,7 @@
       </section>
       <section class="coach">
         <div class="container">
-          <h2 class="coach__heading">Тренеры</h2>
+          <h2>Тренеры</h2>
           <div class="coach__wrapper">
             <button type="button" class="coach__button coach__button--prev" aria-label="назад">
               <svg aria-hidden="true" focusable="false" width="18" height="34" xmlns="http://www.w3.org/2000/svg">
@@ -494,66 +471,70 @@
       </section>
       <section class="advantages">
         <div class="advantages__container container">
-          <h2 class="advantages__title">Наши преимущества</h2>
-          <div class="advantages__wrapper">
-            <div class="advantages__block">
-              <div>
-                <p class="advantages__quantity">900</p>
-                <p class="advantages__measure">кв/м</p>
+          <h2>Наши преимущества</h2>
+          <ul class="advantages__list advantages__wrapper">
+            <li class="advantages__item advantages__item--center">
+              <div class="advantages__number">
+                <span>100</span>
+                <span>Тренажеров</span>
               </div>
-              <dl class="advantages__list">
-                <dt>Площадь</dt>
-                <dd>Занимайтесь без очередей и&nbsp;толпучки</dd>
-              </dl>
-            </div>
-            <div class="advantages__block">
-              <div>
-                <p class="advantages__quantity">70</p>
-                <p class="advantages__measure">машин</p>
+              <div class="advantages__content">
+                <p>Современные тренажеры на&nbsp;все группы мышц</p>
               </div>
-              <dl class="advantages__list">
-                <dt>Собственная парковка</dt>
-                <dd>Вы всегда найдете место для своей&nbsp;машины на нашей парковке</dd>
-              </dl>
-            </div>
-            <div class="advantages__special-block">
-              <b>100</b>
-              <p>Тренажеров</p>
-              <span>Современные тренажеры на&nbsp;все группы мышц</span>
-            </div>
-            <div class="advantages__block">
-              <div>
-                <p class="advantages__quantity">350</p>
-                <p class="advantages__measure">мест</p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__number">
+                <span>900</span>
+                <span>кв/м</span>
               </div>
-              <dl class="advantages__list">
-                <dt>Комфорт</dt>
-                <dd>Просторные раздевалки, душевые,&nbsp;фен, Wi-Fi, кулеры</dd>
-              </dl>
-            </div>
-            <div class="advantages__block">
-              <div>
-                <p class="advantages__quantity">5+</p>
-                <p class="advantages__measure">лет</p>
+              <div class="advantages__content">
+                <h3>Площадь</h3>
+                <p>Занимайтесь без очередей и&nbsp;толпучки</p>
               </div>
-              <dl class="advantages__list">
-                <dt>Тренерский опыт</dt>
-                <dd>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</dd>
-              </dl>
-            </div>
-          </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__number advantages__number--column">
+                <span>70</span>
+                <span>машин</span>
+              </div>
+              <div class="advantages__content">
+                <h3>Собственная парковка</h3>
+                <p>Вы&nbsp;всегда найдете место для своей&nbsp;машины на&nbsp;нашей парковке</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__number">
+                <span>350</span>
+                <span>мест</span>
+              </div>
+              <div class="advantages__content">
+                <h3>Комфорт</h3>
+                <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+              </div>
+            </li>
+            <li class=" advantages__item">
+              <div class="advantages__number advantages__number--column">
+                <span>5+</span>
+                <span>лет</span>
+              </div>
+              <div class="advantages__content">
+                <h3>Тренерский опыт</h3>
+                <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="stocks">
         <div class="container">
-          <h2 class="stocks__heading">Акции</h2>
+          <h2>Акции</h2>
           <div class="stocks__wrapper">
             <article class="stocks__promo">
               <div class="stocks__left">
                 <div>
-                  <h3 class="stocks__title">Год</h3>
+                  <h3>Год</h3>
                   <b>4999</b>
-                  <p class="stocks__description">Безлимитный абонемент в тренажерный зал</p>
+                  <p>Безлимитный абонемент в тренажерный зал</p>
                 </div>
                 <a class="stocks__btn stocks__btn--left" href="#">подробнее</a>
               </div>
@@ -565,15 +546,15 @@
               <h2 class="visually-hidden">Акции</h2>
               <div class="stocks__card">
                 <dl>
-                  <dt class="stocks__card-title">Месяц бесплатно</dt>
-                  <dd class="stocks__card-description">Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</dd>
+                  <dt>Месяц бесплатно</dt>
+                  <dd>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</dd>
                 </dl>
                 <a class="stocks__btn" href="#">подробнее</a>
               </div>
               <div class="stocks__card">
                 <dl>
-                  <dt class="stocks__card-title">Скидка 20%</dt>
-                  <dd class="stocks__card-description">Корпоративный фитнес с&nbsp;командой</dd>
+                  <dt>Скидка 20%</dt>
+                  <dd>Корпоративный фитнес с&nbsp;командой</dd>
                 </dl>
                 <a class="stocks__btn" href="#">подробнее</a>
               </div>
@@ -583,7 +564,7 @@
       </section>
       <section class="feedback">
         <div class="container">
-          <h2 class="feedback__heading">Отзывы</h2>
+          <h2>Отзывы</h2>
           <div class="feedback__wrapper">
             <button type="button" class="feedback__button feedback__button--prev" aria-label="назад">
               <svg aria-hidden="true" focusable="false" width="18" height="34" xmlns="http://www.w3.org/2000/svg">
@@ -605,10 +586,7 @@
                   </picture>
                   <div>
                     <h3>Анна Орлова</h3>
-                    <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда
-                      чисто, тренажеры обновляют,
-                      персонал
-                      дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                    <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                   </div>
                 </div>
                 <div class="swiper-slide feedback__slide">
@@ -619,10 +597,7 @@
                   </picture>
                   <div>
                     <h3>Анна Орлова</h3>
-                    <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда
-                      чисто, тренажеры обновляют,
-                      персонал
-                      дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                    <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                   </div>
                 </div>
               </div>
@@ -632,8 +607,8 @@
       </section>
       <div class="user-info">
         <section class="form">
-          <h2 class="form__heading">Бесплатное занятие</h2>
-          <form method="get" action="https://echo.htmlacademy.ru/">
+          <h2>Бесплатное занятие</h2>
+          <form method="post" action="https://echo.htmlacademy.ru/">
             <div class="form__contact">
               <label>
                 <input type="text" name="name" minlength="3" placeholder="Имя" required>
@@ -646,27 +621,27 @@
           </form>
         </section>
         <section class="contact">
-          <h2 class="contact__heading">Контакты</h2>
+          <h2>Контакты</h2>
           <div class="contact__wrapper">
             <ul class="contact__list">
               <li>
-                <h3 class="contact__title">Адрес:</h3>
+                <h3>Адрес:</h3>
                 <address class="contact__description">
                   г. Омск, ул. 60 лет Октября, 7
                 </address>
               </li>
               <li>
-                <h3 class="contact__title">График работы:</h3>
+                <h3>График работы:</h3>
                 <p class="contact__description">Пн-Вс: с 8:00 до 22:00</p>
               </li>
             </ul>
             <ul class="contact__list">
               <li>
-                <h3 class="contact__title">Телефон:</h3>
+                <h3>Телефон:</h3>
                 <a href="tel:88005555555" class="contact__description">8-800-555-55-55</a>
               </li>
               <li>
-                <h3 class="contact__title">Email:</h3>
+                <h3>Email:</h3>
                 <a class="contact__description" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
               </li>
             </ul>
@@ -684,27 +659,20 @@
           </a>
           <nav class="user-nav">
             <ul class="user-nav__list">
-              <li class="user-nav__item user-nav__item--logo">
-                <a class="user-nav__logo">
-                  <svg width="119" height="23">
-                    <use xlink:href="img/sprite.svg#logo"></use>
-                  </svg>
-                </a>
-              </li>
               <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Услуги</a>
+                <a href="#">Услуги</a>
               </li>
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Абонементы</a>
+              <li class="user-nav__item user-nav__item--subscriptions">
+                <a href="#">Абонементы</a>
               </li>
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Акции</a>
+              <li class="user-nav__item user-nav__item--stock">
+                <a href="#">Акции</a>
               </li>
-              <li class="user-nav__item">
+              <li class="user-nav__item user-nav__item--coaches">
                 <a class="user-nav__link" href="#">Тренеры</a>
               </li>
-              <li class="user-nav__item">
-                <a class="user-nav__link" href="#">Расписание</a>
+              <li class="user-nav__item user-nav__item--schedule">
+                <a href="#">Расписание</a>
               </li>
             </ul>
           </nav>
