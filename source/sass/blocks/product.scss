@@ -234,12 +234,6 @@
     border-image-slice: 3;
     outline: none;
   }
-
-  &:hover .product__link {
-    color: $color-default-white;
-    border: none;
-    background: linear-gradient(97.05deg, $torch-red 17.6%, $cobalt 95.31%);
-  }
 }
 
 .product__btn {
