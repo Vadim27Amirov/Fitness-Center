@@ -1,24 +1,31 @@
-const productBtnBox = document.querySelector('.product__btn-box');
-const productBox = document.querySelectorAll('.product__card');
-const productBtn = document.querySelectorAll('.product__btn');
+const productContent = document.querySelector('.product__content--nojs');
+productContent.classList.remove('product__content--nojs');
 
-const switchProduct = () => {
-  productBtnBox.addEventListener('click', (evt) => {
-    const currentButton = evt.target.dataset.number;
-    if (currentButton) {
-      productBox.forEach((el) => el.classList.remove('is-open'));
-      const currentList = (document.querySelector(`[data-tab='${currentButton}']`));
-      currentList.classList.add('is-open');
+const productCard = document.querySelectorAll('.product__card--nojs');
+productCard.forEach((card) => {
+  card.classList.remove('product__card--nojs');
+});
 
-      productBtn.forEach((btn) => {
-        if (btn.dataset.number === currentButton) {
-          btn.classList.add('is-active');
-        } else {
-          btn.classList.remove('is-active');
-        }
-      });
-    }
-  });
+document.querySelectorAll('.product__btn').forEach((btn) =>
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    const id = evt.target.getAttribute('href').replace('#', '');
+
+    document.querySelectorAll('.product__btn').forEach(
+        (child) => child.classList.remove('product__btn--active')
+    );
+    document.querySelectorAll('.product__card').forEach(
+        (child) => child.classList.remove('product__card--active')
+    );
+
+    btn.classList.add('product__btn--active');
+
+    document.getElementById(id).classList.add('product__card--active');
+  })
+);
+
+const product = () => {
+  document.querySelector('.product__btn').click();
 };
 
-export {switchProduct};
+export {product};
