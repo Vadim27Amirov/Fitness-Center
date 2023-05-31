@@ -2,7 +2,7 @@
 // Источник - https://github.com/pepelsbey/playground/tree/main/12
 
 function playVideo() {
-  let videos = document.querySelectorAll('.video');
+  let videos = document.querySelectorAll('.gym__content-video');
 
   for (let i = 0; i < videos.length; i++) {
     setupVideo(videos[i]);
@@ -10,9 +10,9 @@ function playVideo() {
 }
 
 function setupVideo(video) {
-  let link = video.querySelector('.video__link');
-  let media = video.querySelector('.video__content');
-  let button = video.querySelector('.video__btn');
+  let link = video.querySelector('.gym__video-link');
+  let media = video.querySelector('.gym__media');
+  let button = video.querySelector('.gym__video-button');
   let id = parseMediaURL(media);
 
   video.addEventListener('click', () => {
@@ -24,7 +24,7 @@ function setupVideo(video) {
   });
 
   link.removeAttribute('href');
-  video.classList.add('video__enabled');
+  video.classList.add('gym__content-video--enabled');
 }
 
 function parseMediaURL(media) {
@@ -41,7 +41,7 @@ function createIframe(id) {
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
   iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__content');
+  iframe.classList.add('gym__media');
 
   return iframe;
 }

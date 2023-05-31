@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {product} from './modules/product';
-import {addCoachSwiper, addFeedbackSwiper} from './modules/add-swiper';
+import {addCoachSwiper} from './modules/add-swiper';
 import playVideo from './modules/video';
+import {maskPhone} from './modules/mask-phone';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,10 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     addCoachSwiper();
-    addFeedbackSwiper();
     initModals();
     product();
     playVideo();
+    maskPhone();
   });
 });
 
