@@ -41,6 +41,7 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
+  padding: 0;
 }
 .swiper-android .swiper-slide,
 .swiper-wrapper {
@@ -216,7 +217,7 @@
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: '';
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
@@ -225,7 +226,7 @@
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: '';
 }
 .swiper-button-lock {
   display: none;

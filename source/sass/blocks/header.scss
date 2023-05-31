@@ -12,10 +12,9 @@
 }
 
 .header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 31px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
 
   @include vp-1199 {
     margin: 33px 0 0 0;
@@ -34,6 +33,8 @@
   line-height: 31px;
   letter-spacing: 0.03em;
   color: $color-default-white;
+  place-self: start end;
+  grid-column: 2/3;
 
   @include vp-1199 {
     font-size: 24px;

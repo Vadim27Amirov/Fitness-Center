@@ -1,0 +1,231 @@
+.gym {
+  min-height: 658px;
+  margin: 0 auto;
+  padding: 120px 0 235px;
+
+  @include vp-1199 {
+    min-height: 854px;
+    padding: 100px 0 183px;
+  }
+
+  @include vp-767 {
+    min-height: 925px;
+    padding: 64px 0 70px;
+  }
+}
+
+.gym__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1320px;
+  min-width: 636px;
+  padding: 0 80px 0 140px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    max-width: 1289px;
+    min-width: 768px;
+  }
+
+  @include vp-767 {
+    max-width: 767px;
+    min-width: 320px;
+    padding: 0;
+  }
+}
+
+.gym__inner {
+  width: 440px;
+  padding: 39px 80px 20px 0;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 0 0 35px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 25px;
+    text-align: left;
+  }
+}
+
+.gym__inner h2 {
+  margin: 0;
+  font-family: $ff-alumnisans;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    padding-right: 16px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.gym__inner > p {
+  margin: 0;
+  padding: 7px 0 39px;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1199 {
+    padding: 0 0 34px;
+  }
+
+  @include vp-767 {
+    padding: 5px 0 24px;
+  }
+}
+
+.gym__text {
+  font-family: $ff-robotocondensed;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-1199 {
+    width: 502px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: auto;
+    min-width: 258px;
+    margin: 0;
+    padding-right: 32px;
+  }
+}
+
+.gym__text p {
+  margin: 0;
+  padding-bottom: 8px;
+
+  @include vp-1199 {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+.gym__content-image {
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.gym__content-image img {
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.gym__video-wrap {
+  position: absolute;
+  left: 39.2%;
+  top: 288px;
+  width: 364px;
+  height: 228px;
+
+  @include vp-1199 {
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: -83px;
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+  }
+}
+
+.gym__content-video iframe {
+  @include vp-767 {
+    height: auto;
+    aspect-ratio: 19.16/10;
+  }
+}
+
+.gym__content-video {
+  position: relative;
+  width: 100%;
+  height: 228px;
+
+  @include vp-1199 {
+    height: 167px;
+  }
+
+  @include vp-767 {
+    height: 0;
+    padding-bottom: 52.25%;
+    background-color: #798baf;
+  }
+}
+
+.gym__content-video:hover .gym__video-button {
+  opacity: 0.8;
+}
+
+.gym__video-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gym__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.gym__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: none;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/svg/icon-play.svg");
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+    background-size: 73px;
+  }
+}
+
+
+.gym__content-video--enabled {
+  cursor: pointer;
+}
+
+.gym__content-video--enabled .gym__video-button {
+  display: block;
+  border: none;
+}
+
